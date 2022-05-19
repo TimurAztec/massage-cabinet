@@ -1,0 +1,5 @@
+function getCat() {
+
+}
+
+export { getCat }
