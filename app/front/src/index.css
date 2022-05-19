@@ -6,3 +6,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+:root {
+  --main-color: rgb(120,10,120);
+  --secondary-color: rgb(160,20,160);
+}
