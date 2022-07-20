@@ -2,21 +2,21 @@ import { Entity, Column, PrimaryGeneratedColumn } from "typeorm";
 
 @Entity('visits')
 export class Visit {
-  @PrimaryGeneratedColumn()
+  @PrimaryGeneratedColumn({type: 'integer'})
   id: number;
 
-  @Column()
+  @Column({type: 'text'})
   client_name: string;
 
-  @Column({default: ''})
+  @Column({type: 'text', default: ''})
   client_email: string;
 
-  @Column()
+  @Column({type: 'text'})
   client_phone: string;
 
-  @Column({default: ''})
+  @Column({type: 'text', default: ''})
   comment: string;
 
-  @Column()
+  @Column({type: 'integer'})
   type: number;
 }

@@ -1,6 +1,6 @@
 import { Body, Controller, Get, Post } from "@nestjs/common";
 import { VisitsService } from "./visits.service";
-import { CreateVisitDto } from "./visits.dto";
+import { CreateVisitDto } from "./dto/create-visit.dto";
 
 @Controller()
 export class VisitsController {
@@ -9,7 +9,7 @@ export class VisitsController {
   }
 
   @Get()
-  async findAll() {
+  async getMany() {
     return await this.visitsService.getMany();
   }
 

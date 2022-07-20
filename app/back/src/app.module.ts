@@ -5,10 +5,16 @@ import { TypeOrmModule } from "@nestjs/typeorm";
 import { ServeStaticModule } from '@nestjs/serve-static';
 import { join } from 'path';
 import { getConnectionOptions } from 'typeorm';
+import { UsersModule } from './users-module/users.module';
+import { AuthModule } from './auth-module/auth.module';
+import { SalonsModule } from './salons-module/salons.module';
 
 @Module({
   imports: [
     VisitsModule,
+    SalonsModule,
+    AuthModule,
+    UsersModule,
     RouterModule.register([
       {
         path: 'api',
@@ -16,6 +22,18 @@ import { getConnectionOptions } from 'typeorm';
           {
             path: 'visits',
             module: VisitsModule
+          },
+          {
+            path: 'salons',
+            module: SalonsModule
+          },
+          {
+            path: 'users',
+            module: UsersModule
+          },
+          {
+            path: 'auth',
+            module: AuthModule
           }
         ]
       },
