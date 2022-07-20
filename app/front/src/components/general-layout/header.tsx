@@ -22,8 +22,7 @@ function Header(props: any) {
             <section className={`w-full flex flex-col md:flex-row items-center p-4`}>
                 <span className={`w-full md:w-1/2 lg:w-2/12 flex items-center`}>
                     <img src={logoSrc} className={`rounded w-16`}></img>
-                    {/* <h1>Julia Schepetko</h1> */}
-                    <h1>{t('Welcome to React')}</h1>
+                    <h1>{t('Logo')}</h1>
                     <div className="flex md:hidden ml-auto" onClick={() => setBurgerMenuVisible(!showBurgerMenu)}>
                         <div className="space-y-2">
                         <span className="block w-8 h-0.5 bg-black animate-pulse"></span>
